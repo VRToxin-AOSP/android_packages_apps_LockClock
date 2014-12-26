@@ -21,28 +21,21 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/activatedBackgroundIndicator"
     android:gravity="center_vertical"
-    android:minHeight="48dp"
+    android:paddingStart="24dip"
     android:paddingEnd="?android:attr/scrollbarSize">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="6dip"
-        android:layout_marginEnd="6dip"
-        android:layout_marginLeft="6dip"
-        android:layout_marginStart="6dip">
-
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-    </LinearLayout>
+        android:layout_marginStart="0dip"
+        android:layout_marginEnd="8dip"
+        android:layout_gravity="center" />
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dip"
+        android:layout_marginStart="0dip"
         android:layout_marginEnd="6dip"
         android:layout_marginStart="2dip"
         android:layout_marginTop="6dip"
@@ -52,6 +45,9 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textColor="@color/preference_title"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:singleLine="true"
@@ -62,7 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/title"
-            android:layout_below="@id/title"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="@color/preference_summary"
             android:ellipsize="end"
             android:maxLines="2"
             android:textAppearance="?android:attr/textAppearanceSmall" />
