@@ -44,8 +44,10 @@ public class ClockPreferences extends PreferenceFragment implements
         super.onCreate(savedInstanceState);
         getPreferenceManager().setSharedPreferencesName(Constants.PREF_NAME);
         addPreferencesFromResource(R.xml.preferences_clock);
-
         mContext = getActivity();
+
+        getActivity().getActionBar().setTitle(getResources().getString(R.string.clock_category));
+
         mClockFontColor = (ListPreference) findPreference(Constants.CLOCK_FONT_COLOR);
         mAlarmFontColor = (ListPreference) findPreference(Constants.CLOCK_ALARM_FONT_COLOR);
         mAmPmToggle = (SwitchPreference) findPreference(Constants.CLOCK_AM_PM_INDICATOR);

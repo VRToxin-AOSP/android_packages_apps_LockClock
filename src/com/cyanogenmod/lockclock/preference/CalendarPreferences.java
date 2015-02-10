@@ -54,6 +54,8 @@ public class CalendarPreferences extends PreferenceFragment implements
         addPreferencesFromResource(R.xml.preferences_calendar);
         mContext = getActivity();
 
+        getActivity().getActionBar().setTitle(getResources().getString(R.string.calendar_category));
+
         // The calendar list entries and values are determined at run time, not in XML
         MultiSelectListPreference calendarList =
                 (MultiSelectListPreference) findPreference(Constants.CALENDAR_LIST);

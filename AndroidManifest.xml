@@ -60,6 +60,8 @@
         <activity android:name=".preference.ClockPreferences" />
         <activity android:name=".preference.CalendarPreferences" />
         <activity android:name=".preference.WeatherPreferences" />
+        <activity android:name=".preference.WeatherSettingPreferences" />
+        <activity android:name=".preference.WeatherWidgetPreferences" />
 
         <!-- The weather forecast activity -->
         <activity android:name=".weather.ForecastActivity"
