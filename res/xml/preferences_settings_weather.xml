@@ -34,7 +34,7 @@
         android:entryValues="@array/weather_interval_values"
         android:title="@string/weather_refresh_interval" />
 
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="weather_use_custom_location"
         android:title="@string/weather_use_custom_location"
         android:defaultValue="false" />
@@ -46,7 +46,7 @@
         android:hint="@string/weather_custom_location_hint"
         android:title="@string/weather_custom_location_title" />
 
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="weather_use_metric"
         android:title="@string/weather_use_metric" />
 

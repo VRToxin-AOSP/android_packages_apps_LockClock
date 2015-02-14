@@ -25,7 +25,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
+import android.preference.SwitchPreference;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -51,10 +51,10 @@ public class WeatherSettingPreferences extends PreferenceFragment implements
     private static final String WEATHER_REFRESH_KEYS =
         Constants.WEATHER_REFRESH_INTERVAL;
 
-    private CheckBoxPreference mUseCustomLoc;
+    private SwitchPreference mUseCustomLoc;
     private EditTextPreference mCustomWeatherLoc;
-    private CheckBoxPreference mUseMetric;
-    private CheckBoxPreference mUseCustomlocation;
+    private SwitchPreference mUseMetric;
+    private SwitchPreference mUseCustomlocation;
 
     private Context mContext;
     private ContentResolver mResolver;
@@ -70,10 +70,10 @@ public class WeatherSettingPreferences extends PreferenceFragment implements
         getActivity().getActionBar().setTitle(getResources().getString(R.string.weather_category));
 
         // Load items that need custom summaries etc.
-        mUseCustomLoc = (CheckBoxPreference) findPreference(Constants.WEATHER_USE_CUSTOM_LOCATION);
+        mUseCustomLoc = (SwitchPreference) findPreference(Constants.WEATHER_USE_CUSTOM_LOCATION);
         mCustomWeatherLoc = (EditTextPreference) findPreference(Constants.WEATHER_CUSTOM_LOCATION_CITY);
-        mUseMetric = (CheckBoxPreference) findPreference(Constants.WEATHER_USE_METRIC);
-        mUseCustomlocation = (CheckBoxPreference) findPreference(Constants.WEATHER_USE_CUSTOM_LOCATION);
+        mUseMetric = (SwitchPreference) findPreference(Constants.WEATHER_USE_METRIC);
+        mUseCustomlocation = (SwitchPreference) findPreference(Constants.WEATHER_USE_CUSTOM_LOCATION);
 
         // At first placement/start default the use of Metric units based on locale
         // If we had a previously set value already, this will just reset the same value
