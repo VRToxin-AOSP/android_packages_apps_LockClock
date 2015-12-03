@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!-- Copyright (C) 2013 The CyanogenMod Project (DvTonder)
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +18,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minHeight="48dp"
     android:background="?android:attr/activatedBackgroundIndicator"
     android:gravity="center_vertical"
     android:paddingStart="24dip"
@@ -33,35 +33,33 @@
         android:layout_gravity="center" />
 
     <RelativeLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dip"
         android:layout_marginEnd="6dip"
-        android:layout_marginStart="2dip"
         android:layout_marginTop="6dip"
+        android:layout_marginBottom="6dip"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/title"
+        <TextView android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceListItem"
             android:textColor="@color/preference_title"
             android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:fadingEdge="horizontal" />
 
-        <TextView
-            android:id="@+id/summary"
+        <TextView android:id="@+id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/title"
             android:layout_alignStart="@id/title"
             android:textAppearance="?android:attr/textAppearanceListItemSecondary"
             android:textColor="@color/preference_summary"
             android:ellipsize="end"
-            android:maxLines="2"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:maxLines="2" />
+
     </RelativeLayout>
+
 </LinearLayout>
