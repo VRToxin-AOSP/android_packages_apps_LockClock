@@ -79,6 +79,8 @@ public class CalendarPreferences extends PreferenceFragment implements
         getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         if (!hasCalendarPermission()) {
             mShowCalendar.setChecked(false);
+        } else {
+            updateCalendars();
         }
     }
 
